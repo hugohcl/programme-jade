@@ -219,6 +219,32 @@ section[data-theme="g"] { --acc: var(--ink); --acc-soft: #E4E8E6; }
   padding: 1rem;
 }
 
+.exo.optional {
+  border-style: dashed;
+  background: transparent;
+}
+
+.exo-num.warm, .exo-num.opt {
+  background: var(--bg);
+  color: var(--muted);
+  border: 1.5px solid var(--line);
+}
+
+.opt-tag {
+  display: inline-block;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  background: var(--acc-soft);
+  padding: 0.12rem 0.45rem;
+  border-radius: 0.4rem;
+  margin-left: 0.4rem;
+  vertical-align: middle;
+}
+
 .exo-head { display: flex; gap: 0.75rem; align-items: flex-start; }
 
 .exo-num {
@@ -596,24 +622,24 @@ footer {
 <!-- ================= SÉANCE A ================= -->
 <section id="tab-a" data-theme="a">
   <div class="s-head">
-    <p class="eyebrow">Séance A · environ 50 min</p>
+    <p class="eyebrow">Séance A · environ 45 min</p>
     <h2>Jambes, fessiers &amp; ventre</h2>
-    <p>Suis les cartes dans l'ordre des numéros. Ouvre « Comment faire » sous chaque exercice les premières fois, et coche une pastille (1, 2, 3) après chaque série pour te repérer.</p>
+    <p>Un échauffement, puis 3 exercices dans l'ordre des numéros. Ouvre « Comment faire » les premières fois, et coche une pastille (1, 2, 3) après chaque série. La dernière carte est en option, si tu as le temps.</p>
     <div class="note"><b>« 3 × 12 »</b> veut dire 3 séries de 12 répétitions, avec un repos entre chaque. <b>Semaines 1 et 2 :</b> fais seulement 2 séries par machine, on apprend d'abord les mouvements.</div>
   </div>
 
   <div class="cards">
   <article class="exo" data-id="a1">
     <div class="exo-head">
-      <div class="exo-num">1</div>
+      <div class="exo-num warm">✻</div>
       <div>
         <h3>Vélo, échauffement</h3>
-        <p class="machine">Espace cardio · <b>10 MIN</b> · réveil du corps</p>
+        <p class="machine">Espace cardio · <b>6-8 MIN</b> · réveil du corps</p>
       </div>
     </div>
     <div class="exo-work">
       <div class="sets" data-sets="1" data-done="Fait"></div>
-      <div class="dose">10 min, allure tranquille</div>
+      <div class="dose">6-8 min, allure tranquille</div>
     </div>
     <details>
       <summary>Comment faire</summary>
@@ -626,7 +652,7 @@ footer {
 
   <article class="exo" data-id="a2">
     <div class="exo-head">
-      <div class="exo-num">2</div>
+      <div class="exo-num">1</div>
       <div>
         <h3>Presse à cuisses</h3>
         <p class="machine">Sur la machine : <b>LEG PRESS</b> · cuisses + fessiers</p>
@@ -652,7 +678,7 @@ footer {
 
   <article class="exo" data-id="a3">
     <div class="exo-head">
-      <div class="exo-num">3</div>
+      <div class="exo-num">2</div>
       <div>
         <h3>Arrière des cuisses</h3>
         <p class="machine">Sur la machine : <b>LEG CURL</b> · ischio-jambiers</p>
@@ -676,35 +702,9 @@ footer {
     </details>
   </article>
 
-  <article class="exo" data-id="a4">
-    <div class="exo-head">
-      <div class="exo-num">4</div>
-      <div>
-        <h3>Tirage vertical</h3>
-        <p class="machine">Sur la machine : <b>VERTICAL TRACTION</b> · dos + posture</p>
-      </div>
-    </div>
-    <div class="exo-work">
-      <div class="sets" data-sets="3"></div>
-      <div class="dose">3 × 12 · repos 1 min à 1 min 30</div>
-      <label class="poids">Mon poids <input type="text" inputmode="decimal" maxlength="6" data-kg="a4" aria-label="Poids utilisé en kilos"> kg</label>
-    </div>
-    <p class="hint">Pour commencer : <b>environ 20 kg</b>. Un dos musclé, c'est une meilleure posture et un ventre qui paraît plus plat.</p>
-    <p class="hint">Machine prise ? La poulie haute avec la grande barre (LAT MACHINE) fait exactement le même travail.</p>
-    <details>
-      <summary>Comment faire</summary>
-      <div class="how">
-        <p><span class="k">La reconnaître</span>Tu es assise, deux poignées au-dessus de ta tête à tirer vers le bas.</p>
-        <p><span class="k">Réglage</span>Règle la hauteur du siège pour attraper les poignées bras tendus, sans avoir à te lever. S'il y a des coussins pour bloquer les cuisses, cale-les ; sinon reste bien assise, ça suffit.</p>
-        <p><span class="k">Le mouvement</span>Attrape les poignées, sors la poitrine, et tire les coudes vers le bas jusqu'à ce que les poignées arrivent vers le haut de ta poitrine. Remonte lentement. Souffle quand tu tires.</p>
-        <p><span class="k">À éviter</span>Hausser les épaules vers les oreilles, ou te pencher très en arrière pour tricher.</p>
-      </div>
-    </details>
-  </article>
-
   <article class="exo" data-id="a5">
     <div class="exo-head">
-      <div class="exo-num">5</div>
+      <div class="exo-num">3</div>
       <div>
         <h3>Abdos</h3>
         <p class="machine">Sur la machine : <b>AB CRUNCH</b> · ou planche au tapis</p>
@@ -729,12 +729,12 @@ footer {
     </details>
   </article>
 
-  <article class="exo" data-id="a6">
+  <article class="exo optional" data-id="a6">
     <div class="exo-head">
-      <div class="exo-num">6</div>
+      <div class="exo-num opt">+</div>
       <div>
-        <h3>Marche en côte, pour finir</h3>
-        <p class="machine">Tapis de course · <b>10-12 MIN</b> · le brûleur discret</p>
+        <h3>Marche en côte <span class="opt-tag">Option</span></h3>
+        <p class="machine">Tapis de course · <b>10-12 MIN</b> · le brûleur discret, si tu as le temps</p>
       </div>
     </div>
     <div class="exo-work">
@@ -759,24 +759,24 @@ footer {
 <!-- ================= SÉANCE B ================= -->
 <section id="tab-b" data-theme="b" hidden>
   <div class="s-head">
-    <p class="eyebrow">Séance B · environ 50 min</p>
-    <h2>Haut du corps &amp; cardio</h2>
-    <p>Même principe : suis l'ordre des numéros, ouvre « Comment faire » tant que tu en as besoin.</p>
+    <p class="eyebrow">Séance B · environ 45 min</p>
+    <h2>Haut du corps</h2>
+    <p>Un échauffement, puis 3 exercices dans l'ordre des numéros. La dernière carte est en option. Ouvre « Comment faire » tant que tu en as besoin.</p>
     <div class="note"><b>Semaines 1 et 2 :</b> 2 séries par machine suffisent. Et si un poids de départ est trop dur, descends d'un cran sans hésiter.</div>
   </div>
 
   <div class="cards">
   <article class="exo" data-id="b1">
     <div class="exo-head">
-      <div class="exo-num">1</div>
+      <div class="exo-num warm">✻</div>
       <div>
         <h3>Marche rapide, échauffement</h3>
-        <p class="machine">Tapis de course · <b>10 MIN</b> · à plat</p>
+        <p class="machine">Tapis de course · <b>6-8 MIN</b> · à plat</p>
       </div>
     </div>
     <div class="exo-work">
       <div class="sets" data-sets="1" data-done="Fait"></div>
-      <div class="dose">10 min · 5,5-6,5 km/h</div>
+      <div class="dose">6-8 min · 5,5-6,5 km/h</div>
     </div>
     <details>
       <summary>Comment faire</summary>
@@ -789,7 +789,7 @@ footer {
 
   <article class="exo" data-id="b2">
     <div class="exo-head">
-      <div class="exo-num">2</div>
+      <div class="exo-num">1</div>
       <div>
         <h3>Développé assis</h3>
         <p class="machine">Sur la machine : <b>CHEST PRESS</b> · poitrine + bras</p>
@@ -815,7 +815,7 @@ footer {
 
   <article class="exo" data-id="b3">
     <div class="exo-head">
-      <div class="exo-num">3</div>
+      <div class="exo-num">2</div>
       <div>
         <h3>Rowing assis</h3>
         <p class="machine">Sur la machine : <b>LOW ROW</b> · dos + posture</p>
@@ -841,7 +841,7 @@ footer {
 
   <article class="exo" data-id="b4">
     <div class="exo-head">
-      <div class="exo-num">4</div>
+      <div class="exo-num">3</div>
       <div>
         <h3>Développé épaules</h3>
         <p class="machine">Sur la machine : <b>SHOULDER PRESS</b> · épaules</p>
@@ -866,12 +866,12 @@ footer {
     </details>
   </article>
 
-  <article class="exo" data-id="b5">
+  <article class="exo optional" data-id="b5">
     <div class="exo-head">
-      <div class="exo-num">5</div>
+      <div class="exo-num opt">+</div>
       <div>
-        <h3>Au tapis : fessiers + gainage</h3>
-        <p class="machine">Espace étirements · <b>AU SOL</b> · ventre + fessiers</p>
+        <h3>Fessiers + gainage <span class="opt-tag">Option</span></h3>
+        <p class="machine">Espace étirements · <b>AU SOL</b> · ventre + fessiers, si tu as le temps</p>
       </div>
     </div>
     <div class="exo-work">
@@ -879,33 +879,13 @@ footer {
       <div class="dose">3 tours · repos 1 min</div>
     </div>
     <p class="hint">Un tour = <b>pont fessier × 15</b> puis <b>planche 20 à 40 s</b>, enchaînés.</p>
+    <p class="hint">Envie de plus de cardio à la place ? Vélo ou tapis 10 min, ou va voir l'onglet Bonus.</p>
     <details>
       <summary>Comment faire</summary>
       <div class="how">
         <p><span class="k">Pont fessier</span>Allongée sur le dos, genoux pliés, pieds au sol proches des fesses. Monte les hanches en serrant fort les fesses, redescends lentement. 15 répétitions.</p>
         <p><span class="k">Planche</span>Sur les avant-bras et les genoux pour commencer (sur les pieds quand tu seras à l'aise). Corps aligné des épaules aux genoux, ventre serré, on respire normalement. Tiens 20 à 40 secondes.</p>
         <p><span class="k">À éviter</span>Pour la planche : les fesses trop hautes ou le dos qui creuse. Mieux vaut 15 secondes propres que 45 tordues.</p>
-      </div>
-    </details>
-  </article>
-
-  <article class="exo" data-id="b6">
-    <div class="exo-head">
-      <div class="exo-num">6</div>
-      <div>
-        <h3>Vélo, petits sprints</h3>
-        <p class="machine">Espace cardio · <b>10-12 MIN</b> · pour finir</p>
-      </div>
-    </div>
-    <div class="exo-work">
-      <div class="sets" data-sets="1" data-done="Fait"></div>
-      <div class="dose">5 × (30 s rapide / 1 min tranquille)</div>
-    </div>
-    <details>
-      <summary>Comment faire</summary>
-      <div class="how">
-        <p><span class="k">Le format</span>2 min tranquille pour te mettre dedans, puis 5 fois de suite : 30 secondes en pédalant vite, 1 minute tranquille. Termine par 2 min très cool.</p>
-        <p><span class="k">Le bon niveau</span>« Rapide » veut dire essoufflée mais capable de finir les 30 secondes. Pas un sprint de folie.</p>
       </div>
     </details>
   </article>
